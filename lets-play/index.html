@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toby | Lets Play</title>
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link rel="stylesheet" href="../css/foundation.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../css/app.min.css">
+</head>
+<body>
+
+	<div class="row navbar"> <!-- Start Navbar -->
+		<div class="column bone">
+			<div class="s1"></div>
+			<div class="s2"></div>
+			<div class="s3"></div>
+			<div class="s4"></div>
+			<div class="contain-to-grid centerbone">
+				<nav class="top-bar clean" data-topbar role="navigation">
+					<ul class="title-area">
+						<li class="name">
+						  <img class="logo" src="../assets/toby-logo.png">
+						</li>
+						<li class="toggle-topbar menu-icon">
+							<a href="#"><span></span></a>
+						</li>
+					 </ul>
+					 <ul class="nav-items">
+						<li><a href="../">Home</a></li>
+						<li><a href="../pictures/">Pictures</a></li>
+						<li><a href="../videos/">Videos</a></li>
+						<li><a href="./">Lets Play</a></li>
+					 </ul>
+				 </nav>
+			</div>
+		</div>
+	</div> <!-- End Navbar -->
+
+    <div id="rulesModal" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+      <h2 id="modalTitle">Rock, Paper, Scissors, Lizard, Spock</h2>
+      <p class="lead">Rules</p>
+      <p>This game is a game of matchup. Each round, players pick their choice from the following: Rock, Paper, Scissors, Lizard or Spock. If both players pick the same choice, then the result will end up as a tie. Each choice beats and loses to two specific choices.</p>
+      <ul>
+        <li>Rock crushes Lizard</li>
+        <li>Rock crushes Scissors</li>
+        <br>
+        <li>Paper covers Rock</li>
+        <li>Paper disproves Spock</li>
+        <br>
+        <li>Scissors cuts Paper</li>
+        <li>Scissors decapitates Lizard</li>
+        <br>
+        <li>Lizard poisons Spock</li>
+        <li>Lizard eats Paper</li>
+        <br>
+        <li>Spock smashes Scissors</li>
+        <li>Spock vaporizes Rock</li>
+      </ul>
+      <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+    </div>
+
+    <div class="row content-1"><!-- Start content-1 -->
+    	<div class="column large-12 text-center">
+    		<h1>Lets Play</h1>
+            <p class="text-left">Choose a Game:</p>
+            <select id="game-selector">
+                <option value="1">Tic-Tac-Toe</option>
+                <option value="2">Rock, Paper, Scissors, Lizard, Spock</option>
+            </select>
+            <div class="play-center ttc">
+                <div class="row scoreboard">
+                    <div class="column medium-6 medium-offset-3 large-6 large-offset-3">
+                        <div class="row">
+                            <div class="column small-4 win-ttc">
+                                <span>0</span>
+                                <p>WINS</p>
+                            </div>
+                            <div class="column small-4 loss-ttc">
+                                <span>0</span>
+                                <p>LOSSES</p>
+                            </div>
+                            <div class="column small-4 tie-ttc">
+                                <span>0</span>
+                                <p>TIES</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <table class="column medium-8 medium-offset-2 board">
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="play-center rpsls">
+                <div class="row scoreboard">
+                    <div class="column medium-6 medium-offset-3 large-6 large-offset-3">
+                        <div class="row">
+                            <div class="column small-4 win-rpsls">
+                                <span>0</span>
+                                <p>WINS</p>
+                            </div>
+                            <div class="column small-4 loss-rpsls">
+                                <span>0</span>
+                                <p>LOSSES</p>
+                            </div>
+                            <div class="column small-4 tie-rpsls">
+                                <span>0</span>
+                                <p>TIES</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column medium-6 medium-offset-3 large-6 large-offset-3 playhistory">
+                            <p style="margin-bottom: 0px;
+                text-align: left;">(<a data-reveal-id="rulesModal">Rules</a>)</p>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th >Play History</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="legend">
+                                        <th>Round</th>
+                                        <th>You</th>
+                                        <th>Toby</th>
+                                        <th>Result</th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <button id="rock"><span>Rock</span></button>
+                <button id="paper"><span>Paper</span></button>
+                <button id="scissors"><span>Scissors</span></button>
+                <button id="lizard"><span>Lizard</span></button>
+                <button id="spock"><span>Spock</span></button>
+
+            </div>
+
+		</div>
+	</div><!-- End content-1 -->
+
+    <div class="row footer">
+  		<div class="column large-12">
+			<p>TOBY &copy; 2015. ALL RIGHTS RESERVED</p>
+		</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="../js/app.min.js"></script>
+    <script src="../js/game.js"></script>
+</body>
+</html>
